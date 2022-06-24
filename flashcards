@@ -88,10 +88,10 @@ done
 print \\end{document}                           >> $file
 
 # compile tex file
-#pdflatex $file
+pdflatex $file
 
 # pattern match and get pdf variable filename
-#document=${file%.*}.pdf
+document=${file%.*}.pdf
 
 # open document
-#zathura $document
+zathura $document
