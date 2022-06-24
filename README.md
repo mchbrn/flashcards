@@ -6,7 +6,8 @@ Behold.
 
 ## prerequisites
 
-- Have LaTeX installed on your computer.
+- Unix-like operating system
+- LaTeX
 
 ## how to use
 
