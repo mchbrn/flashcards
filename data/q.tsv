@@ -31,7 +31,7 @@ How would show 16 decimal places in the console?	\P 16
 How you retrieve x items from a list?	Using the # operator with a postive value retrieves x values from the start of the list and a negative values retrieves x values from the end of list
 How do you join lists together?	Using the , operator e.g. 10 20 , 30 40 50
 How would you compute the first 10 numbers of the fibonacci sequence?	{x,sum -2#x}/[10;1 1]
-What does deltas do? deltas computes the successive differences across a numeric list
+What does deltas do?	deltas computes the successive differences across a numeric list
 How do you do assign the variable a with the value 42?	a:42
 What is a table?	A collection of columns
 What is a column?	A list
