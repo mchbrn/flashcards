@@ -1,0 +1,43 @@
+Question	Answer
+Who Developed the Q progamming Language?	Arthur Whitney of KX
+What does Q stand for?	Query
+Is Q compiled or interpreted?	Interpreted
+Is Q dynamically or statically typed?	Statically typed
+What paradigm is Q?	Functional
+What data structures is Q based on?	Lists and dictionaries
+What character is used for division?	%
+What data type does division return?	Float
+What does vector programming in Q mean?	Q can do operations on numeric lists automatically
+How do you write a list in Q?	Spaces between values
+What operator counts a list of values?	count
+What kind of precedence does Q use?	All operators have the same precedence
+What order are operators evaluated in?	Right to left
+What operator generates a list of numbers?	til
+How do you write a list of booleans in Q?	0s and 1s without spaces followed by a 'b'
+How much storage does a boolean take?	1 byte
+How do you compare two values?	a=b
+How are dates computed under the covers?	A count of days from the millenium and time from midnight
+What would happen if you compared a date with an integer?	The interpreter would return a boolean because you can compare compatibile underlying values
+How do you define a month?	For January 2000, like this 2000.01m
+How do you cast?	`DATATYPE$VALUE
+How do you add a list of numbers?	Initialise to zero and add across the list: 0 +/ 10 20 30 40 50
+Is q declarative or imperative programming and why?	q is declarative programming because you type what you want to do not how to do it
+What is the / operator and what does it do?	It is often called "over" in Q, in functional progamming it's called "fold", and it takes an arithmetic operator to its left and uses it to operate across a whole list rather than just two numbers
+What is the | operator and what does it do?	It returns the greater of two values e.g. x|y
+What is the & operator and what does it do?	It returns the lesser of two values e.g. x&y
+What is \ and what does it do?	Same as / but it keeps all the intermediate results
+What are two examples of writing a function that squares 5?	{[x]x*x}5 and {x*x}5
+How would show 16 decimal places in the console?	\P 16
+How you retrieve x items from a list?	Using the # operator with a postive value retrieves x values from the start of the list and a negative values retrieves x values from the end of list
+How do you join lists together?	Using the , operator e.g. 10 20 , 30 40 50
+How would you compute the first 10 numbers of the fibonacci sequence?	{x,sum -2#x}/[10;1 1]
+What does deltas do? deltas computes the successive differences across a numeric list
+How do you do assign the variable a with the value 42?	a:42
+What is a table?	A collection of columns
+What is a column?	A list
+How do you sort a table called t by time within date?	t:`date`time xasc t
+How do you time a statement?	Prepend \texttt{\textbackslash t} to the statement
+How do you open port 4242?	\p 4242
+How do you connect to port 4242 on the same machine?	hopen `::4242 or hopen `:localhost:4242
+How do you write the fourth hitchhiker's book title to the file /data/solong.txt?	`:/data/solong.txt 0: ("So long";"and thanks";"for all the fish")
+How do you read the file /data/solong.txt?	read0 `:/data/solong.txt

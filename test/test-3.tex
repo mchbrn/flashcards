@@ -1,0 +1,121 @@
+\documentclass[20pt]{extarticle}
+\usepackage{anyfontsize}
+\usepackage[left=0cm,
+            right=0cm,
+            top=0cm,
+            bottom=0cm,
+            landscape,
+            showframe]{geometry}
+\usepackage{tabularray}
+
+\pagenumbering{gobble}
+
+\begin{document}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.6cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {Who Developed the q progamming language?} & {What does q stand for?} & {Is q compiled or interpreted?} \\
+    {Is q dynamically or statically typed?} & {What paradigm is q?} & {What data structures is q based on?} \\
+    {What character is used for division?} & {What data type does division return?} & {What does vector programming in q mean?} \\
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.5cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {Interpreted} & 
+    {Query} & 
+    {Arthur Whitney of Kx} \\
+    {Lists and dictionaries} & 
+    {Functional} & 
+    {Statically typed} \\
+    {q can do operations on numeric lists automatically} & 
+    {Float} & 
+    {\%}
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.6cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {How do you write a list in q?} & {What operator counts a list of values?} & {What kind of precedence does q use?} \\
+    {What order are operators evaluated in?} & {What operator generates a list of numbers?} & {How do you write a list of booleans in q?} \\
+    {How much storage does a boolean take?} & {How do you compare two values?} & {How are dates computed under the covers?} \\
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.5cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {All operators have the same precedence} & 
+    {\texttt{count}} & 
+    {Spaces between values \\ e.g. \texttt{10 20 30}} \\
+    {0s and 1s followed by a `b'} & 
+    {\texttt{til}} & 
+    {Right to left} \\
+    {A count of days from the millenium and time from midnight} & 
+    {\texttt{a=b}} & 
+    {1 byte}
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.6cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {What would happen if you compared a date with an integer?} & {How do you define a month?} & {How do you cast?} \\
+    {How do you add a list of numbers?} & {Is q declarative or imperative programming and why?} & {What is the / operator and what does it do?} \\
+    {What is the $|$ operator and what does it do?} & {What is the \& operator and what does it do?} & {What is \textbackslash$ $ and what does it do?} \\
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.5cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {\`{}\texttt{DATATYPE\$VALUE}} & 
+    {For January 2000, like this \texttt{2000.01m}} & 
+    {The interpreter would return a boolean because you can compare compatibile underlying values} \\
+    {It is often called ``over'' or ``fold'' and it takes an arithmetic operator to its left and uses it to operate across a whole list rather than just two numbers} & 
+    {q is declarative programming because you type what you want to do not how to do it} & 
+    {Initialise to zero and add across the list: \\ \texttt{0 +/ 10 20 30 40 50}} \\
+    {Same as / but it keeps all the intermediate results} & 
+    {It returns the lesser of two values e.g. \texttt{x\&y}} & 
+    {It returns the greater of two values e.g. \texttt{x|y}}
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.6cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {What are two examples of writing a function that squares 5?} & {How would you show 16 decimal places in the console?} & {How would you retrieve $x$ items from a list?} \\
+    {How do you join lists together?} & {How would you compute the first 10 numbers of the fibonacci sequence?} & {What does \texttt{deltas} do?} \\
+    {How do you assign the variable \texttt{a} with the value 42?} & {What is a table?} & {What is a column?} \\
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.5cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {The \texttt{\#} operator with a postive value retrieves $x$ values from the start of the list and a negative values retrieves $x$ values from the end of list} & 
+    {\texttt{\textbackslash P 16}} & 
+    {\texttt{\textbraceleft[x]x*x\textbraceright5} and \texttt{\textbraceleft x*x\textbraceright 5}} \\
+    {\texttt{deltas} computes the successive differences across a numeric list} & 
+    {\texttt{\textbraceleft x,sum -2\#x\textbraceright/[10;1 1]}} & 
+    {Using the \texttt{,} operator e.g. \\ \texttt{10 20 , 30 40 50}} \\
+    {A list} & 
+    {A collection of columns} & 
+    {\texttt{a:42}}
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.5cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {How do you sort a table called \texttt{t} by time within date?} & 
+    {How do you time a statement?} & 
+    {How do you open port 4242?} \\
+    {How do you connect to port 4242 on the same machine?} & 
+    {How do you write the \\ fourth Hitchhiker's book title to the file /home/mike/hitchhiker} & 
+    {How do you read the file /home/mike/hitchhiker} \\
+    {} & 
+    {} & 
+    {}
+\end{tblr}
+
+\hspace{-1.2cm}
+\begin{tblr}{colsep=0.5cm,colspec={|X[c]|X[c]|X[c]|},rowspec={|X[m,7.03cm]|X[m,7.03cm]|X[m,7.03cm]|}}
+    {\texttt{\textbackslash p 4242}} & 
+    {Prepend \texttt{\textbackslash t} to the statement} & 
+    {\texttt{t:\`{}date\`{}time xasc t}} \\
+    {\texttt{read0 \`{}:/home/mike/hitchhiker}} & 
+    {\texttt{\`{}:/home/mike/hitchhiker 0: ("So long and thanks for all the fish")}} & 
+    {\texttt{hopen \`{}::4242} or \\ \texttt{hopen \`{}:localhost:4242}} \\
+    {} & 
+    {} & 
+    {}
+\end{tblr}
+
+\end{document}

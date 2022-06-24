@@ -1,0 +1,97 @@
+#!/bin/ksh
+
+function writeQ {
+    q1=$1
+    q2=$2 
+    q3=$3
+    q4=$4
+
+    print '\hspace{-0.67cm}'                                                                        >> $file
+    print '\\begin{tblr}{colsep=1.5cm,colspec={|X[c]|X[c]|},rowspec={|X[m,10.35cm]|X[m,10.35cm]|}}' >> $file
+    print '{'$q1'} &'                                                                               >> $file
+    print '{'$q2'} \\\\'                                                                            >> $file
+    print '{'$q3'} &'                                                                               >> $file
+    print '{'$q4'} \\\\'                                                                            >> $file
+    print '\end{tblr}'                                                                         '\n' >> $file
+}
+
+function writeA {
+    a1=$1
+    a2=$2 
+    a3=$3
+    a4=$4
+
+    print '\hspace{-0.67cm}'                                                                        >> $file
+    print '\\begin{tblr}{colsep=1.5cm,colspec={|X[j]|X[j]|},rowspec={|X[m,10.35cm]|X[m,10.35cm]|}}' >> $file
+    print '{'$a2'} &'                                                                               >> $file
+    print '{'$a1'} \\\\'                                                                              >> $file
+    print '{'$a4'} &'                                                                               >> $file
+    print '{'$a3'} \\\\'                                                                              >> $file
+    print '\end{tblr}'                                                                         '\n' >> $file
+}
+
+file=unfmt_flashcards.tex
+cells=$1
+
+cut_questions="$(cut -f1 data/latin.tsv)"
+cut_answers="$(cut -f2 data/latin.tsv)"
+
+set -A questions $cut_questions
+set -A answers   $cut_answers
+
+touch $file
+
+print \\documentclass[a4paper]{extarticle} "\n" >  $file
+
+print \\usepackage{anyfontsize}                 >> $file
+print \\usepackage[left=0cm,                    >> $file
+print '            right=0cm,'                  >> $file
+print '            top=0cm,'                    >> $file
+print '            bottom=0cm,'                 >> $file
+print '            landscape,'                  >> $file
+print '            showframe]{geometry}'        >> $file
+print \\usepackage{tabularray}                  >> $file
+
+print \\pagenumbering{gobble} "\n"              >> $file
+
+print '\\'begin{document} "\n"                  >> $file
+ 
+print \\huge "\n"                               >> $file
+
+count=0
+num_of_q=${#questions[@]}
+pages=$((num_of_q / 4))
+
+set -A page_questions
+set -A page_answers
+
+for i in $(seq $num_of_q) ; do
+    page_questions+=(${questions[i]})
+    page_answers+=(${answers[i]})
+
+    ((count++))
+
+    # every 4 iterations, write data to to file
+    if (( count % 4 == 0 )) ; then
+        writeQ ${page_questions[@]}
+        writeA ${page_answers[@]}
+
+        # reset page arrays
+        set -A page_questions
+        set -A page_answers
+        
+        # reset counter
+        count=0
+    fi
+done
+
+print \\end{document}                           >> $file
+
+# compile tex file
+#pdflatex $file
+
+# pattern match and get pdf variable filename
+#document=${file%.*}.pdf
+
+# open document
+#zathura $document

@@ -1,0 +1,274 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.31)  1 FEB 2022 17:24
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**test.tex
+(./test.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2021-11-22>
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/share/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count191
+\c@Blindtext=\count192
+\c@blind@countparstart=\count193
+\blind@countxx=\count194
+\blindtext@numBlindtext=\count195
+\blind@countyy=\count196
+\c@blindlist=\count197
+\c@blindlistlevel=\count198
+\c@blindlist@level=\count199
+\blind@listitem=\count266
+\c@blind@listcount=\count267
+\c@blind@levelcount=\count268
+\blind@mathformula=\count269
+\blind@Mathformula=\count270
+\c@blind@randomcount=\count271
+\c@blind@randommax=\count272
+\c@blind@pangramcount=\count273
+\c@blind@pangrammax=\count274
+)
+(/usr/share/texmf-dist/tex/latex/labels/labels.sty
+Package: labels 2003/05/22 v.13
+\LabelCols=\count275
+\LabelRows=\count276
+\LeftBorder=\dimen139
+\RightBorder=\dimen140
+\TopBorder=\dimen141
+\BottomBorder=\dimen142
+\numberoflabels=\count277
+\label@width=\dimen143
+\label@height=\dimen144
+\area@width=\dimen145
+\area@height=\dimen146
+\half@label=\dimen147
+\half@area=\dimen148
+\addr@width=\dimen149
+\LabTmp=\dimen150
+\this@label=\box50
+\label@number=\count278
+\skip@labels=\count279
+\l@so@far=\count280
+\LabelTotal=\count281
+\@Milli=\count282
+\sk@pped=\count283
+)
+(/usr/share/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2021/12/15 v3.1 ragged2e Package
+\CenteringLeftskip=\skip49
+\RaggedLeftLeftskip=\skip50
+\RaggedRightLeftskip=\skip51
+\CenteringRightskip=\skip52
+\RaggedLeftRightskip=\skip53
+\RaggedRightRightskip=\skip54
+\CenteringParfillskip=\skip55
+\RaggedLeftParfillskip=\skip56
+\RaggedRightParfillskip=\skip57
+\JustifyingParfillskip=\skip58
+\CenteringParindent=\skip59
+\RaggedLeftParindent=\skip60
+\RaggedRightParindent=\skip61
+\JustifyingParindent=\skip62
+)
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count284
+\l__pdf_internal_box=\box51
+) (./test.aux)
+\openout1 = `test.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+
+To print info, put `\LabelInfotrue' in the preamble
+
+Underfull \hbox (badness 5533) in paragraph at lines 15--17
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 15--17
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 15--17
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 17.
++
+Underfull \hbox (badness 5533) in paragraph at lines 19--20
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 19--20
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 19--20
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
++
+Underfull \hbox (badness 5533) in paragraph at lines 22--23
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 22--23
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 22--23
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
++ |
+Underfull \hbox (badness 5533) in paragraph at lines 25--26
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 25--26
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 25--26
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
++
+Underfull \hbox (badness 5533) in paragraph at lines 28--29
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 28--29
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 28--29
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
++
+Underfull \hbox (badness 5533) in paragraph at lines 31--32
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 31--32
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 31--32
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
++ |
+Underfull \hbox (badness 5533) in paragraph at lines 34--35
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 34--35
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 34--35
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
++
+Underfull \hbox (badness 5533) in paragraph at lines 37--38
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 37--38
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 37--38
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
++
+Underfull \hbox (badness 5533) in paragraph at lines 40--41
+\OT1/cmr/m/n/10 Lorem Ip-sum is sim-ply
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 40--41
+\OT1/cmr/m/n/10 try. Lorem Ip-sum has
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 40--41
+\OT1/cmr/m/n/10 the 1500s, when an un-
+ []
+
++ | [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./test.aux) ) 
+Here is how much of TeX's memory you used:
+ 792 strings out of 478353
+ 14523 string characters out of 5854635
+ 325800 words of memory out of 5000000
+ 18985 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,7n,48p,396b,137s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on test.pdf (1 page, 18370 bytes).
+PDF statistics:
+ 13 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
