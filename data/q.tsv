@@ -39,5 +39,5 @@ How do you sort a table called t by time within date?	t:`date`time xasc t
 How do you time a statement?	Prepend \texttt{\textbackslash t} to the statement
 How do you open port 4242?	\p 4242
 How do you connect to port 4242 on the same machine?	hopen `::4242 or hopen `:localhost:4242
-How do you write the fourth hitchhiker's book title to the file /data/solong.txt?	`:/data/solong.txt 0: ("So long";"and thanks";"for all the fish")
+How do you write the fourth hitchhiker's book title to the file /data/solong.txt?	`:/data/solong.txt 0: (``So long'';``and thanks'';``for all the fish'')
 How do you read the file /data/solong.txt?	read0 `:/data/solong.txt
