@@ -1,8 +1,8 @@
 # flashcards
 
-Tired of reading off a screen? Wish you Anki deck was on good old-fashioned paper?
+Tired of reading off a screen? Wish your hip flashcard app was made of good old-fashioned paper?
 
-Look no further, my dear boy.
+Behold.
 
 ## prerequisites
 

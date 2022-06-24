@@ -24,17 +24,19 @@ function writeA {
     print '\hspace{-0.67cm}'                                                                        >> $file
     print '\\begin{tblr}{colsep=1.5cm,colspec={|X[j]|X[j]|},rowspec={|X[m,10.35cm]|X[m,10.35cm]|}}' >> $file
     print '{'$a2'} &'                                                                               >> $file
-    print '{'$a1'} \\\\'                                                                              >> $file
+    print '{'$a1'} \\\\'                                                                            >> $file
     print '{'$a4'} &'                                                                               >> $file
-    print '{'$a3'} \\\\'                                                                              >> $file
+    print '{'$a3'} \\\\'                                                                            >> $file
     print '\end{tblr}'                                                                         '\n' >> $file
 }
 
 file=unfmt_flashcards.tex
-cells=$1
+input=$1
 
-cut_questions="$(cut -f1 data/latin.tsv)"
-cut_answers="$(cut -f2 data/latin.tsv)"
+cut_questions="$(cut -f1 data/$input)"
+cut_answers="$(cut -f2 data/$input)"
+
+print $cut_questions
 
 set -A questions $cut_questions
 set -A answers   $cut_answers
@@ -88,10 +90,10 @@ done
 print \\end{document}                           >> $file
 
 # compile tex file
-pdflatex $file
+#pdflatex $file
 
 # pattern match and get pdf variable filename
-document=${file%.*}.pdf
+#document=${file%.*}.pdf
 
 # open document
-zathura $document
+#zathura $document
