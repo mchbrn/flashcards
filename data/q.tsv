@@ -22,7 +22,7 @@ How do you define a month?	For January 2000, like this 2000.01m
 How do you cast?	`DATATYPE$VALUE
 How do you add a list of numbers?	Initialise to zero and add across the list: 0 +/ 10 20 30 40 50
 Is q declarative or imperative programming and why?	q is declarative programming because you type what you want to do not how to do it
-What is the / operator and what does it do?	It is often called "over" in Q, in functional progamming it's called "fold", and it takes an arithmetic operator to its left and uses it to operate across a whole list rather than just two numbers
+What is the / operator and what does it do?	It is often called ``over'' in Q, in functional progamming it's called ``fold'', and it takes an arithmetic operator to its left and uses it to operate across a whole list rather than just two numbers
 What is the | operator and what does it do?	It returns the greater of two values e.g. x|y
 What is the & operator and what does it do?	It returns the lesser of two values e.g. x&y
 What is \ and what does it do?	Same as / but it keeps all the intermediate results
