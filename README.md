@@ -6,7 +6,7 @@ Behold.
 
 ## prerequisites
 
-- Unix-like operating system
+- ksh
 - LaTeX
 
 ## how to use
