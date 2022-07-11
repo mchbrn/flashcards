@@ -1,14 +1,10 @@
 Question	Answer
-Who Developed the Q progamming Language?	Arthur Whitney of KX
-What does Q stand for?	Query
 Is Q compiled or interpreted?	Interpreted
 Is Q dynamically or statically typed?	Statically typed
-What paradigm is Q?	Functional
 What data structures is Q based on?	Lists and dictionaries
 What character is used for division?	%
 What data type does division return?	Float
-What does vector programming in Q mean?	Q can do operations on numeric lists automatically
-How do you write a list in Q?	Spaces between values
+How do you write a list in Q?	Spaces between values e.g. list:(1 3 5 7 9)
 What operator counts a list of values?	count
 What kind of precedence does Q use?	All operators have the same precedence
 What order are operators evaluated in?	Right to left
@@ -41,3 +37,57 @@ How do you open port 4242?	\p 4242
 How do you connect to port 4242 on the same machine?	hopen `::4242 or hopen `:localhost:4242
 How do you write the fourth hitchhiker's book title to the file /data/solong.txt?	`:/data/solong.txt 0: (``So long'';``and thanks'';``for all the fish'')
 How do you read the file /data/solong.txt?	read0 `:/data/solong.txt
+What is the numeric representation of a boolean?	1
+What is the numeric representation of a guid?	2
+What is the numeric representation of a byte?	4
+What is the numeric representation of a short?	5
+What is the numeric representation of an int?	6
+What is the numeric representation of a long?	7
+What is the numeric representation of a real?	8
+What is the numeric representation of a float?	9
+What is the numeric representation of a char?	10
+What is the numeric representation of a symbol?	11
+What is the numeric representation of a timestamp?	12
+What is the numeric representation of a month?	13
+What is the numeric representation of a date?	14
+What is the numeric representation of a datetime?	15
+What is the numeric representation of a timespan?	16
+What is the numeric representation of a minute?	17
+What is the numeric representation of a second?	18
+What is the numeric representation of a time?	19
+What is the character representation of a boolean?	b
+What is the character representation of a guid?	g
+What is the character representation of a byte?	x
+What is the character representation of a short?	h
+What is the character representation of an int?	i
+What is the character representation of a long?	j
+What is the character representation of a real?	e
+What is the character representation of a float?	f
+What is the character representation of a char?	c
+What is the character representation of a symbol?	s
+What is the character representation of a timestamp?	p
+What is the character representation of a month?	m
+What is the character representation of a date?	d
+What is the character representation of a datetime?	z
+What is the character representation of a timespan?	n
+What is the character representation of a minute?	u
+What is the character representation of a second?	v
+What is the character representation of a time?	t
+What is the size of a boolean?	1 byte
+What is the size of a guid?	16 bytes
+What is the size of a byte?	1 byte
+What is the size of a short?	2 bytes
+What is the size of an int?	4 bytes
+What is the size of a long?	8 bytes
+What is the size of a real?	4 bytes
+What is the size of a float?	8 bytes
+What is the size of a char?	1 byte
+What is the size of a symbol?
+What is the size of a timestamp?	8 bytes
+What is the size of a month?	4 bytes
+What is the size of a date?	4 bytes
+What is the size of a datetime?	8 bytes
+What is the size of a timespan?	8 bytes
+What is the size of a minute?	4 bytes
+What is the size of a second?	4 bytes
+What is the size of a time?	4 bytes
