@@ -1,24 +1,23 @@
 Question	Answer
-Is Q compiled or interpreted?	Interpreted
-Is Q dynamically or statically typed?	Statically typed
-What data structures is Q based on?	Lists and dictionaries
+Is q compiled or interpreted?	Interpreted
+Is q dynamically or statically typed?	Statically typed
+Is q declarative or imperative programming and why?	q is declarative programming because you type what you want to do not how to do it
+What data structures is q based on?	Lists and dictionaries
 What character is used for division?	%
 What data type does division return?	Float
-How do you write a list in Q?	Spaces between values e.g. list:(1 3 5 7 9)
+How do you write a list in Q?	(1 3 5 7 9)
 What operator counts a list of values?	count
-What kind of precedence does Q use?	All operators have the same precedence
+What kind of precedence does q use?	All operators have the same precedence
 What order are operators evaluated in?	Right to left
 What operator generates a list of numbers?	til
-How do you write a list of booleans in Q?	0s and 1s without spaces followed by a 'b'
-How much storage does a boolean take?	1 byte
+How do you write a list of booleans in q?	101101b
 How do you compare two values?	a=b
-How are dates computed under the covers?	A count of days from the millenium and time from midnight
-What would happen if you compared a date with an integer?	The interpreter would return a boolean because you can compare compatibile underlying values
-How do you define a month?	For January 2000, like this 2000.01m
-How do you cast?	`DATATYPE$VALUE
+How are dates computed under the hood?	A count of days from the millenium and time from midnight
+What would happen if you compared a date with an integer?	The interpreter would compare compatibile the underlying numeric values and return a boolean
+How do you define a month?	2000.01m
+How do you cast?	`datatype$value
 How do you add a list of numbers?	Initialise to zero and add across the list: 0 +/ 10 20 30 40 50
-Is q declarative or imperative programming and why?	q is declarative programming because you type what you want to do not how to do it
-What is the / operator and what does it do?	It is often called ``over'' in Q, in functional progamming it's called ``fold'', and it takes an arithmetic operator to its left and uses it to operate across a whole list rather than just two numbers
+What is the / operator and what does it do?	It is often called ``over'' in q, in functional progamming it's called ``fold'', and it takes an arithmetic operator to its left and uses it to operate across a whole list rather than just two numbers
 What is the | operator and what does it do?	It returns the greater of two values e.g. x|y
 What is the & operator and what does it do?	It returns the lesser of two values e.g. x&y
 What is \ and what does it do?	Same as / but it keeps all the intermediate results
@@ -37,57 +36,58 @@ How do you open port 4242?	\p 4242
 How do you connect to port 4242 on the same machine?	hopen `::4242 or hopen `:localhost:4242
 How do you write the fourth hitchhiker's book title to the file /data/solong.txt?	`:/data/solong.txt 0: (``So long'';``and thanks'';``for all the fish'')
 How do you read the file /data/solong.txt?	read0 `:/data/solong.txt
-What is the numeric representation of a boolean?	1
-What is the numeric representation of a guid?	2
-What is the numeric representation of a byte?	4
-What is the numeric representation of a short?	5
-What is the numeric representation of an int?	6
-What is the numeric representation of a long?	7
-What is the numeric representation of a real?	8
-What is the numeric representation of a float?	9
-What is the numeric representation of a char?	10
-What is the numeric representation of a symbol?	11
-What is the numeric representation of a timestamp?	12
-What is the numeric representation of a month?	13
-What is the numeric representation of a date?	14
-What is the numeric representation of a datetime?	15
-What is the numeric representation of a timespan?	16
-What is the numeric representation of a minute?	17
-What is the numeric representation of a second?	18
-What is the numeric representation of a time?	19
-What is the character representation of a boolean?	b
-What is the character representation of a guid?	g
-What is the character representation of a byte?	x
-What is the character representation of a short?	h
-What is the character representation of an int?	i
-What is the character representation of a long?	j
-What is the character representation of a real?	e
-What is the character representation of a float?	f
-What is the character representation of a char?	c
-What is the character representation of a symbol?	s
-What is the character representation of a timestamp?	p
-What is the character representation of a month?	m
-What is the character representation of a date?	d
-What is the character representation of a datetime?	z
-What is the character representation of a timespan?	n
-What is the character representation of a minute?	u
-What is the character representation of a second?	v
-What is the character representation of a time?	t
-What is the size of a boolean?	1 byte
-What is the size of a guid?	16 bytes
-What is the size of a byte?	1 byte
-What is the size of a short?	2 bytes
-What is the size of an int?	4 bytes
-What is the size of a long?	8 bytes
-What is the size of a real?	4 bytes
-What is the size of a float?	8 bytes
-What is the size of a char?	1 byte
-What is the size of a symbol?
-What is the size of a timestamp?	8 bytes
-What is the size of a month?	4 bytes
-What is the size of a date?	4 bytes
-What is the size of a datetime?	8 bytes
-What is the size of a timespan?	8 bytes
-What is the size of a minute?	4 bytes
-What is the size of a second?	4 bytes
-What is the size of a time?	4 bytes
+What is an atom?	An atom is an irreducible value of a specific data type.
+What is the numeric type of a boolean?	1
+What is the numeric type of a guid?	2
+What is the numeric type of a byte?	4
+What is the numeric type of a short?	5
+What is the numeric type of an int?	6
+What is the numeric type of a long?	7
+What is the numeric type of a real?	8
+What is the numeric type of a float?	9
+What is the numeric type of a char?	10
+What is the numeric type of a symbol?	11
+What is the numeric type of a timestamp?	12
+What is the numeric type of a month?	13
+What is the numeric type of a date?	14
+What is the numeric type of a datetime?	15
+What is the numeric type of a timespan?	16
+What is the numeric type of a minute?	17
+What is the numeric type of a second?	18
+What is the numeric type of a time?	19
+What is the character type of a boolean?	b
+What is the character type of a guid?	g
+What is the character type of a byte?	x
+What is the character type of a short?	h
+What is the character type of an int?	i
+What is the character type of a long?	j
+What is the character type of a real?	e
+What is the character type of a float?	f
+What is the character type of a char?	c
+What is the character type of a symbol?	s
+What is the character type of a timestamp?	p
+What is the character type of a month?	m
+What is the character type of a date?	d
+What is the character type of a datetime?	z
+What is the character type of a timespan?	n
+What is the character type of a minute?	u
+What is the character type of a second?	v
+What is the character type of a time?	t
+What size is a boolean?	1 byte
+What size is a guid?	16 bytes
+What size is a byte?	1 byte
+What size is a short?	2 bytes
+What size is an int?	4 bytes
+What size is a long?	8 bytes
+What size is a real?	4 bytes
+What size is a float?	8 bytes
+What size is a char?	1 byte
+What size is a timestamp?	8 bytes
+What size is a month?	4 bytes
+What size is a date?	4 bytes
+What size is a datetime?	8 bytes
+What size is a timespan?	8 bytes
+What size is a minute?	4 bytes
+What size is a second?	4 bytes
+What size is a time?	4 bytes
+What is the default integer type?	long
