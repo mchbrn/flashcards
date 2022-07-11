@@ -13,7 +13,7 @@ What operator generates a list of numbers?	til
 How do you write a list of booleans in q?	101101b
 How do you compare two values?	a=b
 How are dates computed under the hood?	A count of days from the millenium and time from midnight
-What would happen if you compared a date with an integer?	The interpreter would compare compatibile the underlying numeric values and return a boolean
+What happens if you compared a date with an integer?	The interpreter compares compatible underlying numeric values and return a boolean
 How do you define a month?	2000.01m
 How do you cast?	`datatype$value
 How do you add a list of numbers?	Initialise to zero and add across the list: 0 +/ 10 20 30 40 50
