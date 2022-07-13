@@ -12,7 +12,7 @@ What order are operators evaluated in?	Right to left
 What operator generates a list of numbers?	til
 How do you write a list of booleans in q?	101101b
 How do you compare two values?	a=b
-How are dates computed under the hood?	A count of days from the millenium and time from midnight
+How are dates and times computed under the hood?	A count of days from the millenium and time from midnight
 What happens if you compared a date with an integer?	The interpreter compares compatible underlying numeric values and return a boolean
 How do you define a month?	2000.01m
 How do you cast?	`datatype$value
@@ -22,8 +22,8 @@ What is the | operator and what does it do?	It returns the greater of two values
 What is the & operator and what does it do?	It returns the lesser of two values e.g. x&y
 What is \ and what does it do?	Same as / but it keeps all the intermediate results
 What are two examples of writing a function that squares 5?	{[x]x*x}5 and {x*x}5
-How would show 16 decimal places in the console?	\P 16
-How you retrieve x items from a list?	Using the # operator with a postive value retrieves x values from the start of the list and a negative values retrieves x values from the end of list
+How would you show 16 decimal places in the console?	\P 16
+How would you retrieve x items from a list?	Using the # operator with a postive value retrieves x values from the start of the list and a negative values retrieves x values from the end of list
 How do you join lists together?	Using the , operator e.g. 10 20 , 30 40 50
 How would you compute the first 10 numbers of the fibonacci sequence?	{x,sum -2#x}/[10;1 1]
 What does deltas do?	deltas computes the successive differences across a numeric list
@@ -91,3 +91,26 @@ What size is a minute?	4 bytes
 What size is a second?	4 bytes
 What size is a time?	4 bytes
 What is the default integer type?	long
+How do you instantiate a symbol that has spaces in it?	Cast from a string
+How do you obtain the underlying date count from a date?	Cast to an int
+How do you obtain the underlying time count from a time?	Cast to an int
+How do you obtain the underlying time count from a timespan?	Cast to a long
+How do you obtain the underlying time count from a timestamp?	Cast to a float
+How do you obtain the date from a timestamp?	Cast to a date
+How do you obtain the timespan from a timestamp?	Cast to a timespan
+How do you obtain the underlying time count from a month?	Cast to an int
+How do you obtain the underlying time count from a minute?	Cast to an int
+How do you obtain the underlying time count from a second?	Cast to an int
+To what precision is the time type?	milliseconds
+To what precision is the timespan type?	nanoseconds
+Which date-time type is deprecated?	datetime
+Which date-time type is preferred?	timestamp
+What format do you use to write a date?	yyyy.mm.dd
+What format do you use to write a time?	hh:mm:ss.uuu
+What format do you use to write a timespan?	0Dhh:mm:ss.nnnnnnnnn, 0D optional
+What format do you use to write a timestamp?	yyyy.mm.ddDhh:mm:ss:nnnnnnnnn
+What format do you use to write a month?	yyyy.mm with a trailing type indicator m
+What format do you use to write a minute?	hh:mm
+What format do you use to write a second?	hh:mm:ss
+How do you access the constituents of compound temporal types?	Cast to year, mm, dd, hh, minute, ss
+How do you access milliseconds or nanoseconds from compound temporal types?	cast to int and long and mod 1000 and 1000000000 respectively
