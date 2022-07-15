@@ -1,0 +1,44 @@
+Question	Answer
+How is I/O realised?	Via handles.
+What are handles?	Symbolic names of resources e.g. files or machines on a network.
+What is a one-and-done operation?	One that can be carried out directly on the symbolic handle e.g. you can read a file into memory in one operation.
+What is a continuing operation?	One in which the symbolic handle must first be opened to obtain an open handle to operate on.
+What flavors do files come in?	Text and binary.
+What character do text processing routines have in their name?	0
+What character do binary processing routines have in their name?	1
+How are text files considered in q?	As a list of strings, a list of char lists
+How are binary files considered in q?	As a list of byte lists
+What is a file handle?	A symbol that represents the name of a directory or file in persistent storage.
+What form do symbolic file handles take?	`:[path]name
+How do you get the size of a file in bytes?	hcount `:/path/to/file
+How do you delete a file?	hdel `:/path/to/file
+How do you write binary data to a file?	`:/path/to/file set 42
+What is returned following a set operation?	The symbolic handle of the written file, which is automatically closed after the write is complete.
+How do you read serialised q data from a file?	get `:/path/to/file or value `:/path/to/file or \l /path/to/file
+What does opening a symbolic handle return?	A function called an open handle that is used to perform operations.
+How do you open a data file handle and what is its resulting function called?	hopen returns the open handle.
+How do you append to a file containing serialised q data?	h:hopen `:/path/to/file \n h[42] \n h 100 200 \n hclose h
+How do you close the open handle?	hclose h
+Does hopen create a new file if none exists?	Yes
+How do you read a binary file in as a list of bytes?	read1 `:/path/to/file
+How do you write raw binary data to a file?	`:/path/to/file 1: 0x06072a`
+How do you use dot amend to write/overwrite a file?	.[`:/path/to/file; (); :; 1001 1002 1003]
+How do you use dot amend to append a file?	.[`:/path/to/file; (); ,; 42]
+What does save write tables to a file?	save serialises a table in a global variable to a binary file of the same name.
+How do you use save to write a table to a file.	t:([] c1:`a`b`c; c2:1 2 3) \n save `:/path/to/t
+How do you use load to read a serialised table from a file into a variable of the same name?	load `:/path/to/t
+How do you save a tab delimited table called t to a .txt file?	save `:/path/to/t.txt
+Is there a corresponding load for reading a table from a .txt file?	No
+What determines if data will be saved as binary or text data using save?	The file extension
+What is a splayed table?	A table whose columns are serialised to their own file.
+What are the advantages of splayed tables?	Some tables are too large ot fit into memory on all machines so serialising columns individually requires a fraction of the memory and when querying a splayed table, only the columns referred to in the query will be loaded into memory.
+How do you splay a table?	Use set and specify a directory as the target location.
+How do you get the column order of a splayed table?	get hsym `$"/path/to/.d"
+What restrictions are there on splayed tables?	All columns must be simple or compound lists and symbol columns must be enumerated.
+How do you read the file /path/to/file.txt?	read0 `:/path/to/file.txt
+How can you see the underlying binary values of /path/to/file.txt?	read1 `:/path/to/file.txt
+How do you read /path/to/file.txt as binary values and convert back to text?	"c"$read1 `:/path/to/file.txt
+How do you write a list of strings to /path/to/file.txt?	`:/path/to/file.txt 0: ("Life", "The Universe, "And Everything")
+Do 0: and 1: overwrite or append?	Overwrite
+How do you write text data to /path/to/file.txt with an open handle?	h:hopen `:/file/to/path.txt \n neg[h] enlist "This" \n neg[h] ("and"; "that) \n hclose h
+Does writing to an open handle overwrite or append?	Append

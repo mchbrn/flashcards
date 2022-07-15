@@ -77,3 +77,4 @@ What format do you use to write a minute?	hh:mm
 What format do you use to write a second?	hh:mm:ss
 How do you access the constituents of compound temporal types?	Cast to year, mm, dd, hh, minute, ss
 How do you access milliseconds or nanoseconds from compound temporal types?	cast to int and long and mod 1000 and 1000000000 respectively
+What is a compound list?	A list of simple lists of uniform type.
