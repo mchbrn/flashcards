@@ -1,0 +1,13 @@
+Question,	Answer
+What are attributes?	Metadata that you attach to lists of special forms.
+Where are attributes used?	Lists, dictionary domains and table columns.
+Are attributes descriptive or prescriptive?	Descriptive, except for `g#.
+Are attributes applied to a copy or in place?	In place.
+Should you always apply attributes?	No, unless the data you are working with is big enough to benefit from the optimisation otherwise applying attributes will use resources needlessly.
+What are all the attributes?	Sorted (`s#), unique(`u#), grouped(`g#), and parted(`p#).
+What does the applying the sorted attribute on a simple list indicate?	That the the items of the list are sorted in ascending order.
+How do you indicate a descending sort?	You can't.
+What type of search is used on lists with and without the sorted attributes?	Binary and linear search respectively.
+When is the sorted attribute applied automatically?	When you sort a list with asc.
+When is the sorted attribute dropped automatically?	When you join an item to a sorted list that causes it to become unsorted.
+

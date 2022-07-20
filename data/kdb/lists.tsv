@@ -1,0 +1,20 @@
+Question	Answer
+What are all data structures ultimately built from?	Lists
+What is a dictionary made from?	A pair of lists.
+What is a table made from?	A special dictionary.
+What is a keyed table made from?	A pair of tables.
+What is a list?	An ordered collection of atoms and other lists.
+What is a simple list?	A list of atoms of homogenous type.
+What is a general list?	A list comprised of non-homogenous atoms e.g. atoms of mixed type, nested lists of uniform type or atoms and nested lists of mixed type.
+What are the members of a list called?	Items
+How do you return the first item in of big_list?	first big_list
+How do you return the last item in of big_list?	last big_list
+How do you index the second item of big_list?	big_list[1]
+How do you assign 42 to the first item of big_list?	big_list[0]:42
+What happens to a general list when you reassign the only non-conforming item?	It automatically converts to a simple list.
+How can you prevent a list from converting to a simple list when you make all the items homogenous atoms?	You can include the nil operator (::) as the first item as a guard.
+How do you join small_list to big_list?	big_list,small_list
+What happens when you use assignment with indexing at depth and why?	It fails because the intermediate retrievals are ephemeral.
+How do you get the third, second, zeroth and third items of big_list?	big_list[3 2 0 3]
+How do you assign the value 999 to both the second and third items of big_list?	big_list[1 2]:999
+How do you find the first occurrence of 5 in the list 2 4 3 5 6 2 5?	2 4 3 5 6 2 5?5
