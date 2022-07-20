@@ -15,6 +15,6 @@ What happens to a general list when you reassign the only non-conforming item?	I
 How can you prevent a list from converting to a simple list when you make all the items homogenous atoms?	You can include the nil operator (::) as the first item as a guard.
 How do you join small_list to big_list?	big_list,small_list
 What happens when you use assignment with indexing at depth and why?	It fails because the intermediate retrievals are ephemeral.
-How do you get the third, second, zeroth and third items of big_list?	big_list[3 2 0 3]
+How do you get the third, second, first and third items of big_list?	big_list[2 1 0 2]
 How do you assign the value 999 to both the second and third items of big_list?	big_list[1 2]:999
 How do you find the first occurrence of 5 in the list 2 4 3 5 6 2 5?	2 4 3 5 6 2 5?5
