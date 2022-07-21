@@ -1,0 +1,25 @@
+Question	Answer
+What does the workspace comprise?	The collection of all q entities created in the current q session plus ancillary items such as enumerations, open handlers, tables mapped from storage and other internal structures.
+What happens when you load two scripts that both create the global variable foobar?	The second script overwrites the value assigned to foobar in the first script.
+Is q single or multi-threaded by default?	Single-threaded
+Are variables mutable in the thread implementation?	No
+What is a namespace?	A hierarchical structure of names.
+What are containers for names called in q?	Contexts
+How is the variable x from the jab context represented?	.jab.x
+What is a context?	A dictionary whose keys are the symbolic names of the variables in the corresponding namespace associating each variable name with its currently assigned value.
+How do you represent the entity bubba in the cat context?	.cat.bubba
+How do you list the names of all contexts in the root?	key `
+How do you list the namespaces created in the .mike context?	key .mike
+How do you list the variables declared in the .mike.shopping context?	.mike.shopping or get `.mike.shopping or value `.mike.shopping
+Where do the context dictionaries live?	In the workspace.
+Can you perform normal operations on context dictionaries?	Yes
+How do you display the internal form of an empty root context?	.Q.s1 get `. or .Q.s1 value `.
+Why is the first entry of a context ::?	To prevent the value list of the context dictionary from collapsing to a simple list should the variables all be homogenous atoms.
+How do you retrieve and store global variables by name inside functions?	{`a set 1+ get `a}[]
+How do you expunge a bad_var from the root context?	delete bad_var from `.
+How do you expunge bad_var from the root context?	delete bad_var from `.
+How do you expunge bubba from the cat context?	delete bubba from `.cat
+How do you print the list of variables in the context mike?	\v .mike
+How do you persist the root context as a serialised q object?	`:/home/mike/q/workspace/root set get `.
+How do you read a serialised object back into the root context?	`. set get `:/home/mike/q/workspace/root
+How do you switch the current working context to the jab namespace?	\d .jab

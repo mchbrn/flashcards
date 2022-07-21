@@ -1,5 +1,5 @@
 flashcards.*
 unfmt_flashcards*
-data/finance.tsv
+data/finance/*
 data/maths.tsv
 test/
