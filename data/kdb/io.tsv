@@ -41,4 +41,4 @@ How do you read /path/to/file.txt as binary values and convert back to text?	"c"
 How do you write a list of strings to /path/to/file.txt?	`:/path/to/file.txt 0: ("Life", "The Universe, "And Everything")
 Do 0: and 1: overwrite or append?	Overwrite
 How do you write text data to /path/to/file.txt with an open handle?	h:hopen `:/file/to/path.txt \n neg[h] enlist "This" \n neg[h] ("and"; "that) \n hclose h
-Does writing to an open handle overwrite or append?	Append
+Does writing to an open handle overwrite or append to an existing file?	Append

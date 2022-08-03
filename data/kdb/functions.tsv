@@ -1,2 +1,3 @@
 Question	Answer
 Why is q not a pure functional language?	Q can modify global variables whereas a mathematical function can never reach outside its own body.
+How to write to console and return value?	0N!x

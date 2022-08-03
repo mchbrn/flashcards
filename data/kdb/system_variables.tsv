@@ -1,0 +1,32 @@
+Question	Answer
+.z.a	IP address ~ The IP address as a 32-bit integer. When invoked inside a .z.p* callback, it is the client's IP, not the current session. ~ q).z.a ~ -1062731737i
+.z.b 	dependencies ~ The dependency dictionary. ~ q)a::x+y ~ q)b::x+1 ~ q).z.b ~ x| `a`b ~ y| ,`a
+.z.c	cores ~ The number of physical cores.
+.z.D/d	date shortcut ~ The current date.
+.z.e	TLS connection status. ~ q)0N!h1".z.e"; ~ `CIPHER`PROTOCOL!`AES128-GCM-SHA256`TLSV1.2
+.z.ex	failed primitive ~ In debug mode, .z.ex is set to the failed primitive.
+.z.ey	argument to failed primitive ~ In debug mode, .z.ey is set to the argument to the failed primitive
+.z.f	file ~ Name of the q script as a symbol. ~ $ q test.q ~ q).z.f ~ `test.q
+.z.H	active sockets ~ Active sockests as a list. (A low-cost method.) ~ q).z.H ~ ,3i ~ q).z.H key .z.W ~ 1b
+.z.h	host ~ The host name as a symbol. ~ q).z.h ~ `mike.techknowledg.ie
+.z.i	PID ~ The process ID as an integer ~ q).z.i ~ 7732i
+.z.K	version ~ The major version number, as a float, of the version of kdb+ being used. ~ q).z.K ~ 4f
+.z.k	release date ~ Date on which the version of kdb+ being used was released. ~ q).z.k ~ 2022.07.01
+.z.l	license ~ License information as a list of strings
+.z.N	local timespan ~ System local time as timespan in nanoseconds. ~ q).z.N ~ 0D15:56:32.176948968
+.z.n	UTC timespan ~ System UTC time as timespan in nanoseconds. ~ q).z.n ~ 0D14:57:35.428803535
+.z.o	OS version ~ kdb+ operating system version as a symbol ~ q).z.o ~ `l64
+.z.P	local timestamp ~ System localtime timestamp in nanoseconds. ~ q).z.P ~ 2022.08.03D16:47:51.539081835
+.z.p	UTC timestamp ~ UTC timestamp in nanoseconds. ~ q).z.p ~ 2022.08.03D15:47:51.539081835
+.z.pm	HTTP options ~ HTTP OPTIONS method are passed to f as a 3-list
+.z.q	quiet mode ~ 1b if Quiet Mode is set, else 0b. ~ $ q -q ~ 2+2 ~ 4
+.z.s	self ~ A reference to the current function. Can be used to generate recursive function calls. ~ q)fact:{$[x<=0;1;x*.z.s x-1]} ~ q)fact[5] ~ 120
+.z.T/t	time shortcut ~ The current time.
+.z.u	user ID ~ User ID, as a symbol, associated with the current handle or userid under which the process is running if no handle is open. ~ q).z.u ~ `mike
+.z.W	handles ~ Dictionary of IPC handles with the number of bytes waiting in their output queues.
+.z.w	handle ~ Connection handle; 0 for current session console.
+.z.X	raw command line ~ Returns a list of strings of the raw, unfiltered command line with which kdb+ was invoked.
+.z.x	argv ~ Command-line arguments as a list of strings. can be converted to a dictionary with .Q.opt
+.z.Z	local datetime ~ Local time as a datetime atom ~ q).z.Z ~ 2022.08.03T17:28:58.279
+.z.z	UTC datetime ~ UTC time as a datetime atom. ~ 2022.08.03T16:28:58.279
+.z.zd	zip defaults ~ Define default values for logical block size, compression algo and compression level that apply when saving to files with no file extension. ~ .z.zd(lbs;alg;lvl) ~ q).z.zd:17 2 6 / set zip defaults ~ \x .z.zd / clear zip defaults
