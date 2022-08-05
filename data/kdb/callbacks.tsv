@@ -1,19 +1,19 @@
 Question	Answer
-.z.ac	HTTP auth from cookie ~ Lets you define custom code to extract Single Sign On token cookies from the HTTP header and verify it, decoding and returning the username, or instructing what action to take.
-.z.bm	msg validator ~ To validate incoming IPC messages, raw messages are captured for analysis via the callback .z.bm
-.z.exit	action on exit ~ The function assigned to .z.exit is called just before exiting the kdb_ session..
-.z.pc	
-.z.pd	
-.z.pg	
-.z.ph	
-.z.pi	
-.z.po	
-.z.pp	
-.z.pq	
-.z.ps	
-.z.pw	
-.z.ts	
-.z.vs	
-.z.wc	
-.z.wo	
-.z.ws	
+.z.ac	HTTP auth from cookie - Lets you define custom code to extract Single Sign On token cookies from the HTTP header and verify it, decoding and returning the username, or instructing what action to take.
+.z.bm	msg validator - To validate incoming IPC messages, raw messages are captured for analysis via the callback .z.bm
+.z.exit	action on exit - The function assigned to .z.exit is called just before exiting the session.
+.z.pc	close - The function assigned to .z.pc is called after a connection has been closed.
+.z.pd	peach handles - .z.pd may be assigned an int vector of handles to secondary processes or a function that returns a list of handles to those secondary processes.
+.z.pg	get - The function assinged to .z.pg is called after a sync request and the return value is passed by to the calling task.
+.z.ph	HTTP get - The function assigned to .z.pg is evaluated when a sync HTTP request is received.
+.z.pi	input - The function assigned to .z.pi is evaluated as the default handler for input. It is called on every line of input.
+.z.po	open - The function assigned to .z.po is evaluated when a new connection has been initialised.
+.z.pp	HTTP post - The function assigned to .z.pp is evaluated when a HTTP POST request is received.
+.z.pq	qcon - Remote connections using the 'qcon' text protocol are routed to .z.pq, which defaults to calling .z.pi.
+.z.ps	set - The function assigned to .z.ps is evaluated with the object that is passed via an async request. The return value is discarded.
+.z.pw	validate user - The function assigned to .z.pw is evaluated after the -u/-U checks and before .z.po when opening a new connection.
+.z.ts	timer - The function assigned to .z.ts is evaluated on intervals of the timer variable set by system command \t.
+.z.vs	value set - The function assigned to .z.vs is evaluated after a value is set globally in the default namespace
+.z.wc	websocket close - The function assigned to .z.wc is evaluated after a websocket connection has closed.
+.z.wo	websocket open - The function assigned to .z.wo is evaluated when the connection has been initialised: after validation against -u/-U and .z.pw checks.
+.z.ws	websockets - The function assigned to .z.ws is evaluated on a message arriving at a websocket. Websocket messages can be only asynchronous.
