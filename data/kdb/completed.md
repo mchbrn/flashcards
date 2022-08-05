@@ -15,3 +15,7 @@
 - [x] Workspace Organisation
 - [ ] Commands and System Variables
 - [ ] Introduction to Kdb+
+- [x] System Variables
+- [ ] Callbacks
+- [ ] Utilities
+- [ ] Command Line Options

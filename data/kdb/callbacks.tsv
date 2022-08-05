@@ -1,7 +1,7 @@
 Question	Answer
-.z.ac	
-.z.bm	
-.z.exit	
+.z.ac	HTTP auth from cookie ~ Lets you define custom code to extract Single Sign On token cookies from the HTTP header and verify it, decoding and returning the username, or instructing what action to take.
+.z.bm	msg validator ~ To validate incoming IPC messages, raw messages are captured for analysis via the callback .z.bm
+.z.exit	action on exit ~ The function assigned to .z.exit is called just before exiting the kdb_ session..
 .z.pc	
 .z.pd	
 .z.pg	
