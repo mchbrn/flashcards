@@ -36,7 +36,7 @@ input=$1
 cut_questions="$(cut -f1 data/$input)"
 cut_answers="$(cut -f2 data/$input)"
 
-print $cut_questions
+print ${cut_answers[0]}
 
 set -A questions $cut_questions
 set -A answers   $cut_answers
@@ -64,6 +64,7 @@ count=0
 num_of_q=${#questions[@]}
 pages=$((num_of_q / 4))
 
+# define page arrays
 set -A page_questions
 set -A page_answers
 
@@ -71,7 +72,7 @@ for i in $(seq $num_of_q) ; do
     page_questions+=(${questions[i]})
     page_answers+=(${answers[i]})
 
-    ((count++))
+    (( count++ ))
 
     # every 4 iterations, write data to to file
     if (( count % 4 == 0 )) ; then
