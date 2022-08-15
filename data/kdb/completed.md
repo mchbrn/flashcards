@@ -15,7 +15,14 @@
 - [x] Workspace Organisation
 - [ ] Commands and System Variables
 - [ ] Introduction to Kdb+
+- [ ] Keywords
+- [ ] Operators
+- [ ] Iterators 
+- [ ] Execution control
+- [ ] Other
+- [ ] Attributes
+- [ ] System Commands
 - [x] System Variables
-- [ ] Callbacks
+- [x] Callbacks
 - [ ] Utilities
 - [ ] Command Line Options

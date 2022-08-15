@@ -1,0 +1,22 @@
+Question	Answer
+What is the r.q script for?	Defining an rdb process.
+What is the u.q script for?	Handling publishing and subscriptions.
+What is the sym.q script for?	Defining the table schema in your database.
+What two columns does the tickerplant require in schema definition?	The first two columns to be time and sym.
+What type must the first column in sym.q be?	Timespan
+What type must the second column in sym.q be?	It is usually of type symbol although not required.
+What are the default port numbers for the tickerplant, rdb and hdb processes?	5010, 5011 and 5012.
+How do you start the tickerplant?	Call q with the arguments of the tick.q script, the schema file without its .q extension, the hdb dirtectory and the p flag followed by a port number ~ q tick.q sym hdb -p 5010
+What happens if you start the tickerplant without a hdb directory?	The tickerplant will create one for you.
+How do you start the rdb?	Call q with the arguments of the rdb script, the port number of the tickerplant, the port number of the hdb process and the p flag followed by the port number for the rdb process ~ q tick/r.q :5010 :5012 -p 5011
+How do you start the hdb?	Call q with the arguments of the directory of the hdb and a port number ~ q hdb/sym -p 5012
+How do you start the feed?	Call q with the arguments of the feed.q script, the time flag followed by the time in millesconds updates arrive ~ q feed.q -t 200
+How do you manually force the rdb to write down the data to the hdb at the end of day?	.u.end .z.d
+What happens to the tables in the rdb when they are saved to the hdb?	It clears out all the data that was in the tables in the rdb process.
+How do you use port numbers other than the defaults?	Edit the port number in the hopen command on line 82 of feed.q
+When is the function .u.sub called?	When a process wants to be notified of updates from the tickerplant, it opens a handle to it and calls .u.sub
+When is the function .u.rep called?	When the RDB wants to replay data from the log file.
+When is the function .u.tick called?	After the schema is loaded, .u.tick is called and it initialises the connection dictionary (.u.w) and checks the table structure and attributes and calls .u.ld
+When is the function .u.ld called?	.u.ld sets up the log file by loading one if it already exists or creating one if not.
+What does the function .u.w return?	A mapping of tables to subscriptions.
+What does the function .u.endofday do?	.u.endofday handles the end of day rollover by broadcasting a message to all subscribers, increment its internal date and create a new log file.
