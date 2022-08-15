@@ -20,3 +20,6 @@ When is the function .u.tick called?	After the schema is loaded, .u.tick is call
 When is the function .u.ld called?	.u.ld sets up the log file by loading one if it already exists or creating one if not.
 What does the function .u.w return?	A mapping of tables to subscriptions.
 What does the function .u.endofday do?	.u.endofday handles the end of day rollover by broadcasting a message to all subscribers, increment its internal date and create a new log file.
+How might you check if there is a slow subscriber to the tickerplant?	Call .z.W to see if there are any handles that have a long queue of requests waiting. ~ count each .z.W
+How would you prevent a slow subscriber from using up all of the tickerplant's memory?	Kill the slow process or set up a chained tickerplant to batch the messages and send them less frequently.
+What error will the tickerplant exit with if it runs out of memory?	wsfull (unable to allocate memory)
